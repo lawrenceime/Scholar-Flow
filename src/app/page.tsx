@@ -1,66 +1,39 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import React from 'react';
+import { Box, Typography, Grid } from '@mui/material';
+import KpiCards from '../components/dashboard/KpiCards';
+import RecentPayments from '../components/dashboard/RecentPayments';
+import AcademicProgress from '../components/dashboard/AcademicProgress';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <Box sx={{ pb: 4, maxWidth: '1400px', mx: 'auto' }}>
+      <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box>
+          <Typography variant="h4" fontWeight={700} color="text.primary" gutterBottom>
+            Overview
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Welcome back, Admin. Here's what's happening today.
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* KPI Section */}
+      <Box sx={{ mb: 4 }}>
+        <KpiCards />
+      </Box>
+
+      {/* Main Content Section */}
+      <Grid container spacing={4}>
+        <Grid size={{ xs: 12, md: 7, lg: 8 }}>
+          <RecentPayments />
+        </Grid>
+        <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+          <AcademicProgress />
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
