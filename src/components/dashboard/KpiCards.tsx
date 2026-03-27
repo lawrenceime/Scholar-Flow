@@ -51,8 +51,8 @@ export default function KpiCards() {
     <Grid container spacing={3}>
       {kpiData.map((kpi, index) => (
         <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
-          <Card 
-            sx={{ 
+          <Card
+            sx={{
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
@@ -75,8 +75,8 @@ export default function KpiCards() {
                     {kpi.value}
                   </Typography>
                 </Box>
-                <Avatar 
-                  sx={{ 
+                <Avatar
+                  sx={{
                     bgcolor: (theme) => `${kpi.color}15`, // Adding some transparency to the color
                     color: kpi.color,
                     width: 48,
