@@ -14,7 +14,7 @@ import dynamic from 'next/dynamic';
 import AddIcon from '@mui/icons-material/Add';
 import GroupIcon from '@mui/icons-material/Group';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Class } from '@/types/school';
+import { Class } from 'src/types/school';
 import { ConfirmationModal } from '../shared/ConfirmationModal';
 import { SuccessModal } from '../shared/SuccessModal';
 

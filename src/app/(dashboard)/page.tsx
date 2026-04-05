@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-import KpiCards from '../components/dashboard/KpiCards';
-import RecentPayments from '../components/dashboard/RecentPayments';
-import AcademicProgress from '../components/dashboard/AcademicProgress';
+import KpiCards from 'src/features/dashboard/home/KpiCards';
+import RecentPayments from 'src/features/dashboard/home/RecentPayments';
+import AcademicProgress from 'src/features/dashboard/home/AcademicProgress';
 
 export default function Home() {
   return (

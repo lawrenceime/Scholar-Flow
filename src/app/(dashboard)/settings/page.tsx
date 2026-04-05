@@ -13,8 +13,8 @@ import {
 } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { ClassesTab } from '@/components/settings/ClassesTab';
-import { SubjectsTab } from '@/components/settings/SubjectsTab';
+import { ClassesTab } from 'src/components/settings/ClassesTab';
+import { SubjectsTab } from 'src/components/settings/SubjectsTab';
 
 interface TabPanelProps {
     children?: React.ReactNode;

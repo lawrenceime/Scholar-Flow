@@ -21,7 +21,7 @@ import ScienceIcon from '@mui/icons-material/Science';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import PublicIcon from '@mui/icons-material/Public';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import { Subject } from '@/types/school';
+import { Subject } from 'src/types/school';
 import { ConfirmationModal } from '../shared/ConfirmationModal';
 import { SuccessModal } from '../shared/SuccessModal';
 
